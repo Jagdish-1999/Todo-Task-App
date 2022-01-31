@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    font-size: 1.9rem;
+}
+
+.header {
+    display: flex;
+    min-width: 50rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8rem;
+    background-color: #055555;
+    color: #fff;
+    height: 5rem;
+    box-shadow: 0 0 45px 1px rgba(1, 8, 13, 1) inset;
+}
+
+.ul-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: -6rem;
+}
+
+.li-items {
+    padding: 0 2rem;
+}
+
+.li-items a {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+}
+
+.li-items a:hover {
+    text-decoration: underline;
+    text-decoration-color: chartreuse;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    height: 35rem;
+    min-width: 50rem;
+    background-color: grey;
+    box-shadow: 0 0 100px 1px black inset;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-task {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+div .input-field {
+    width: 45rem;
+    font-size: 1.5rem;
+    padding: .9rem;
+    text-transform: none;
+}
+
+div .add-button {
+    box-sizing: content-box;
+    padding: .9rem;
+    width: 10rem;
+    border: none;
+    font-size: 1.7rem;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    background-color: rgba(165, 48, 233, 1);
+    box-shadow: 0 0 40px 1px rgba(1, 8, 33, 1) inset;
+    margin-left: 1px;
+    cursor: pointer;
+}
+
+.div-task {
+    padding: 1rem;
+    margin-top: 5px;
+}
+
+.my-task {
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.left-section ul li {
+    margin: 2px;
+    width: 57rem;
+    color: white;
+    background-color: rgba(0, 50, 40, 0.8);
+    border-radius: 2px;
+    cursor: pointer;
+    padding-right: 0px;
+    word-break: break-all;
+    cursor: default;
+    text-decoration: none;
+}
+
+.button-div {
+    position: relative;
+    bottom: .5rem;
+    left: 0;
+    float: right;
+    width: fit-content;
+}
+
+.done {
+    font-weight: 400;
+    font-size: 1.5rem;
+    height: 3rem;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    padding-right: .5rem;
+    border-right: 2px solid white;
+}
+
+.delete {
+    margin-left: .5rem;
+    margin-right: .5rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    height: 3rem;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+}
