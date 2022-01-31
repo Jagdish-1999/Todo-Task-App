@@ -1,5 +1,4 @@
 let array = [];
-// let array = localStorage.getItem('array') || [];
 // getting elements from html mytodo.html file
 const left_section = document.querySelector(".left-section");
 const taks_list = document.getElementById("task-list");
@@ -51,22 +50,17 @@ function createLiItems(dataArray) {
         // adding functionality for done button  --->  to line through of text of li items
         task_item.addEventListener("click", (e) => {
             if (e.target == done_button) {
-                console.log(e.target);
                 task_item.style.cssText = "text-decoration:line-through;font-style:italic;color:cyan;";
-            } else if (e.target == delete_button) {
+            } 
+            else if (e.target == delete_button) {
                 removeData(task_item.id);
-                console.log(e.target.parentNode.parentNode.id);
-
+                
                 array.forEach((dataId, idx) => {
                     if (dataId.id == e.target.parentNode.parentNode.id) {
                         array.splice(idx, 1);
-                        console.log('dataId', dataId);
-                        console.log('idx', idx);
                         localStorage.setItem("array", JSON.stringify(array)); // ---------------------------------------------------
                     }
                 })
-
-                // localStorage.setItem("array", JSON.stringify(array.filter((todoItem) => todoItem.id !== task_item.id)));
 
                 taks_list.removeChild(task_item);
                 forId = task_item.id;
@@ -74,9 +68,7 @@ function createLiItems(dataArray) {
         });
     });
 };
-console.log(array)
 createLiItems(JSON.parse(localStorage.getItem("array")));
-console.log('after ', array);
 
 //creating  function for new task to add show data on browser
 function createListItem() {
@@ -114,13 +106,10 @@ function createListItem() {
             task_item.style.cssText = "text-decoration:line-through;font-style:italic;";
         } else if (e.target == delete_button) {
             removeData(task_item.id);
-            console.log(e.target);
 
             array.forEach((dataId, idx) => {
                 if (dataId.id == e.target.parentNode.parentNode.id) {
                     array.splice(idx, 1);
-                    console.log('dataId', dataId);
-                    console.log('idx', idx);
                     localStorage.setItem("array", JSON.stringify(array)); // ---------------------------------------------------
                 }
             })
