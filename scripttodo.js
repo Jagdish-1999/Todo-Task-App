@@ -151,5 +151,6 @@ addButton.addEventListener('click', () => {
         array.push(obj);
         localStorage.setItem("array", JSON.stringify(array));
         localStorage.setItem("idof", idof);
+        inputField.value = '';
     }
 });
